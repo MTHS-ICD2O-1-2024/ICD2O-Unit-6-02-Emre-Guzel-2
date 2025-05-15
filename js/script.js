@@ -5,15 +5,29 @@
 // This file contains the JS functions for index.html
 
 "use strict"
-
+let cookieNumber = 0;
 // Setting the cookieClickedBtn function
 function cookieClickedBtn() {
-  let cookieNumber = parseInt(document.getElementById("cokie-button").value);
   // Setting the variables 
+ 
+ 
 
+  //Increase cookie number
   cookieNumber ++
-  document.getElementById("cokie-button").value = cookieNumber
+  // // Save the updated value back to localStorage
+  localStorage.setItem("cookieNumber",cookieNumber)
+  showCookieNumber()
+
+}
+function showCookieNumber(){
+  let cookieNumberFromStorge = localStorage.getItem("cookieNumber")
+
+  // check local stoge has a value 
+  if (cookieNumberFromStorge != null) {
+    cookieNumber = parseInt(cookieNumberFromStorge)
+  }
   // Display result
   document.getElementById("result").innerHTML =
     "You have clicked " + (cookieNumber) + " times.";
+
 }
