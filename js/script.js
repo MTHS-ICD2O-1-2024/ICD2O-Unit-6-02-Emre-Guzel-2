@@ -1,25 +1,25 @@
 // Copyright (c) 2020 Mr. Coxall All rights reserved
 //
 // Created by: Emre Guzel
-// Created on: May 8 2025
+// Created on: May 14 2025
 // This file contains the JS functions for index.html
 
 "use strict"
+
+// Setting the cookieNumber
 let cookieNumber = 0;
+
 // Setting the cookieClickedBtn function
 function cookieClickedBtn() {
-  // Setting the variables 
- 
- 
 
   //Increase cookie number
-  cookieNumber ++
+  cookieNumber++
   // // Save the updated value back to localStorage
-  localStorage.setItem("cookieNumber",cookieNumber)
+  localStorage.setItem("cookieNumber", cookieNumber)
   showCookieNumber()
 
 }
-function showCookieNumber(){
+function showCookieNumber() {
   let cookieNumberFromStorge = localStorage.getItem("cookieNumber")
 
   // check local stoge has a value 
