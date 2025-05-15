@@ -1,4 +1,3 @@
-
 // Copyright (c) 2020 Mr. Coxall All rights reserved
 //
 // Created by: Emre Guzel
@@ -7,26 +6,14 @@
 
 "use strict"
 
-//setting the divdeNumberBtn functoin
-function divdeNumberBtn() {
-
+// Setting the cookieClickedBtn function
+function cookieClickedBtn() {
+  let cookieNumber = parseInt(document.getElementById("cokie-button").value);
   // Setting the variables 
-  const firstNum = parseInt(document.getElementById("first-num").value)
-  const secondNum = parseInt(document.getElementById("second-num").value)
-  let result = 0
-  let remainder = firstNum
 
-  // While loop to do repeated subtraction 
-  while (true) {
-    if (remainder >= secondNum) {
-      remainder = remainder - secondNum
-      result++
-    } else {
-      break
-    }
-  }
-
+  cookieNumber ++
+  document.getElementById("cokie-button").value = cookieNumber
   // Display result
   document.getElementById("result").innerHTML =
-    "Result: " + result + "<br>Remainder: " + remainder
+    "You have clicked " + (cookieNumber) + " times.";
 }

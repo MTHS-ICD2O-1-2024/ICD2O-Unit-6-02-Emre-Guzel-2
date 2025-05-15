@@ -22,7 +22,7 @@ body {
   width: 20%;
   text-align: center;
   margin-top: 1rem;
-  margin-left: -74vw;
+  margin-left: -80vw;
 }
 .cliked{
   margin-left: 4rem;
@@ -30,4 +30,9 @@ body {
 .cokie-button{
   background: none;
   border: none;
+}
+#result{
+  margin: 2rem;
+  margin-left: 2rem;
+  font-size: 1.2rem;
 }
